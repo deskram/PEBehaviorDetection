@@ -39,9 +39,4 @@ This project includes components from the following libraries and tools:
 
 The rights to these tools are held by their respective authors.
 
-## Acknowledgments
-- Thanks to the open-source community for their invaluable contributions.
 
-## Contact
-For any inquiries, please reach out to [your.email@example.com].
-```
