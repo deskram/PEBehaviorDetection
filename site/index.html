@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portable Executable Analysis Tool</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Portable Executable Analysis Tool</h1>
+        <p class="pe-definition">Portable Executable is a format used in Windows for storing executable files such as .exe and .dll.</p>
+        <input type="file" id="fileInput" accept=".exe,.dll">
+        <button id="uploadBtn">Upload File</button>
+        <div id="loadingMessage" class="loading-message" style="display: none;">
+            <span id="countdown">Analyzing... Please wait <span id="timeRemaining">10</span> seconds.</span>
+            <div class="loader"></div>
+        </div>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
