@@ -54,7 +54,7 @@ def analyze_pe_file(file):
 
         data = extract_infos(temp_file_path)
 
-        pe_features = [data.get(feature, 0) for feature in features_list]
+        pe_features = [feature for feature in features_list if str(feature) not in data]
 
         EXPECTED_FEATURES_COUNT = len(pe_features)
         if len(pe_features) != EXPECTED_FEATURES_COUNT:
