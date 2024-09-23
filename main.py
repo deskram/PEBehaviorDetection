@@ -14,7 +14,6 @@ app.add_middleware(CORSMiddleware,
 
 @app.post("/pe_scan/")
 async def pe_scan(file: UploadFile = File(...)):
-    # تحقق من امتداد الملف
     if not re.match(r'^.*\.(exe|dll)$', file.filename):
         raise HTTPException(status_code=400, detail="File must be of type .exe or .dll")
 
