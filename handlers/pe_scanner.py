@@ -56,12 +56,8 @@ def analyze_pe_file(file):
 
         pe_features = [feature for feature in features_list if str(feature) not in data]
 
-        EXPECTED_FEATURES_COUNT = len(pe_features)
-        if len(pe_features) != EXPECTED_FEATURES_COUNT:
-            raise Exception(f"Expected {EXPECTED_FEATURES_COUNT} features, but got {len(pe_features)}")
-
         result = clf.predict([pe_features])[0]
-        classification = 'malicious' if result == 1 else 'legitimate'
+        classification = 'malicious' if result == 0 else 'legitimate'
         
         return {
             'classification': classification,
